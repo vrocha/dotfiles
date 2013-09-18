@@ -1,6 +1,3 @@
-if [ -d "/usr/bin/android-sdk-linux/platform-tools" ] ; then
-      PATH="$PATH:/usr/bin/android-sdk-linux/platform-tools"
-fi
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -57,8 +54,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;36m\]\u\[\033[01;31m\]@\[\033[01;36m\]\h\[\033[01;33m\]:\[\033[01;31m\]\w\[\033[01;33m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -111,8 +107,9 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 source /usr/local/bin/virtualenvwrapper.sh
 
-# Django alias
-alias dj="django-admin.py manage.py"
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+alias wo="workon"
+alias dj="django-admin.py"
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
