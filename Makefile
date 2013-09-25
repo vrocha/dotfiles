@@ -3,6 +3,7 @@ all:
 	make git
 	make vim
 	make indent
+	make bash
 tmux:
 	cp .tmux.conf ~
 	cp -r .tmux ~
@@ -12,3 +13,5 @@ vim:
 	cp .vimrc ~
 indent:
 	cp .indent.pro ~
+bash:
+	cp .bashrc ~
