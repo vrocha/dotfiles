@@ -4,11 +4,11 @@ all:
 	make vim
 	make indent
 tmux:
-	cp .tmux.conf ~
-	cp -r .tmux ~
+	cp tmux.conf ~/.tmux.conf
+	cp -r tmux ~/.tmux
 git:
-	cp .gitconfig ~
+	cp gitconfig ~/.gitconfig
 vim:
-	cp .vimrc ~
+	cp vimrc ~/.vimrc
 indent:
-	cp .indent.pro ~
+	cp indent.pro ~/.indent.pro
