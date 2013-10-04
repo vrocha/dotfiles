@@ -5,13 +5,14 @@ all:
 	make indent
 	make bash
 tmux:
-	cp .tmux.conf ~
-	cp -r .tmux ~
+	cp tmux.conf ~/.tmux.conf
+	cp -r tmux ~/.tmux
 git:
-	cp .gitconfig ~
+	cp gitconfig ~/.gitconfig
+	cp gitignore ~/.gitignore
 vim:
-	cp .vimrc ~
+	cp vimrc ~/.vimrc
 indent:
-	cp .indent.pro ~
+	cp indent.pro ~/.indent.pro
 bash:
-	cp .bashrc ~
+	cp bashrc ~/.bashrc
