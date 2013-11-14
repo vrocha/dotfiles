@@ -105,4 +105,5 @@ source /usr/local/bin/virtualenvwrapper.sh
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 alias wo="workon"
 alias dj="django-admin.py"
-
+alias mkv="mkvirtualenv --distribute"
+alias rmv="rmvirtualenv"
